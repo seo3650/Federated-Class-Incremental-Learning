@@ -179,7 +179,7 @@ class GLFC_model:
             w = self.efficient_old_class_weight(output, label)
             loss_cur = torch.mean(w * F.binary_cross_entropy_with_logits(output, target, reduction='none'))
 
-            # TODO: # TODO: Implement `Class-Semantic Relation Distillation Loss`
+            # TODO: Implement `Class-Semantic Relation Distillation Loss`
             return 0.5 * loss_cur + 0.5 * loss_old
 
     def efficient_old_class_weight(self, output, label):
